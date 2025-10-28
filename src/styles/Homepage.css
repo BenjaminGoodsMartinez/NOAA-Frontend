@@ -1,0 +1,19 @@
+.home-page-container{
+ 
+    width: auto;
+    height: 100vh;
+    background-color: #0066b2 !important;
+    padding: 26px;
+
+}
+.home-page-sub-container{
+     background-color: #0a3c91 !important;
+     height:100%;
+     border-radius: 30px;
+     
+}
+
+.home-page{
+    display: grid;
+    grid-column: auto;
+}

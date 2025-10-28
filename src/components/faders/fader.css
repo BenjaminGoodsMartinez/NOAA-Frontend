@@ -1,0 +1,69 @@
+.fader-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    touch-action: none;
+    margin-top: 15%;
+  }
+  
+  .fader-name {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 1rem;
+  }
+  
+  .slider {
+    width: 300px; /* becomes height when rotated */
+    height: 60px; /* becomes width when rotated */
+    -webkit-appearance: none;
+    appearance: none;
+    background: lightblue;
+    margin: 1rem 0;
+  }
+  
+  .slider::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 70px;
+    background: #ccc;
+    border-radius: 35px;
+    border: 1px solid #aaa;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+  }
+  
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #222;
+    border: 2px solid white;
+    cursor: pointer;
+    margin-top: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .slider::-moz-range-thumb {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #222;
+    border: 2px solid white;
+    cursor: pointer;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .fader-value {
+    font-size: 3rem;
+    font-weight: 500;
+    color: #555;
+    margin-top: 1rem;
+  }
+
+  .faders{
+    display: flex;
+    flex-direction: column;
+  }
+  

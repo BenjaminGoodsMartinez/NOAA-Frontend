@@ -1,0 +1,40 @@
+.inputs-feedback-container, .displays-state-container, .sources-container{
+    display: flex;
+    flex-direction: row !important;
+    justify-content: space-around;
+    
+}
+
+.input-value{
+    background-color: #475d5d5d;
+    padding: 5em;
+    border-radius: 10px;
+    color: white;   
+}
+
+.display-value{
+    background-color: #475d5d5d; 
+    width: 120px;
+    margin-top: 2em;
+    text-align: center;
+    padding: 1.5em;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    border-color: azure;
+    border-width: 0.3px;
+    border-style: solid;
+}
+
+.sources-value{
+    background-color:#57a8a85d!important;
+    padding: 1em;
+    margin-top: 1em;
+    border-radius: 10px;
+    border-color: white;
+    border-style: solid;
+    color: white;
+}
+
+
+

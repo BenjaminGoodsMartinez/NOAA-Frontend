@@ -1,0 +1,14 @@
+.row{
+    display:flex;
+    position: absolute;
+    flex-direction: row;
+    margin: 1em;
+    justify-content: center;
+    width: 100%;
+    top: 75%;
+    background-color: transparent !important;
+
+} 
+.row * {
+     text-decoration: none;
+}
