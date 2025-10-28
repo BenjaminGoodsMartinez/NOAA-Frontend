@@ -9,12 +9,17 @@
     background-color: #475d5d5d;
     padding: 5em;
     border-radius: 10px;
+    width: 250px;
     color: white;   
+    text-align: center;
+    text-wrap: nowrap;
+    display: flex;
+    justify-content: center;
 }
 
 .display-value{
     background-color: #475d5d5d; 
-    width: 120px;
+    width: 170px;
     margin-top: 2em;
     text-align: center;
     padding: 1.5em;
@@ -24,6 +29,7 @@
     border-color: azure;
     border-width: 0.3px;
     border-style: solid;
+        text-wrap: nowrap;
 }
 
 .sources-value{
@@ -34,6 +40,11 @@
     border-color: white;
     border-style: solid;
     color: white;
+
+}
+
+Link *{
+      text-decoration: none !important;  
 }
 
 
