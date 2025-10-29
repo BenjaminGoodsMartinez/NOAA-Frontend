@@ -15,7 +15,7 @@ const links = ['/missioncontrolroom','/briefingroom' ]
 
 
     return (
-        <div className='main-page'>
+       
             <div className='home-page'>
             
            
@@ -27,7 +27,7 @@ const links = ['/missioncontrolroom','/briefingroom' ]
                 buttonFunctions={()=>{}}
             />
         </div>
-            </div>
+     
 
          
     )

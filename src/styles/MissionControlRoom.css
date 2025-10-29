@@ -3,11 +3,12 @@
     flex-direction: row !important;
     justify-content: space-around;
     
+    
 }
 
 .input-value{
     background-color: #475d5d5d;
-    padding: 5em;
+    padding: 3em;
     border-radius: 10px;
     width: 250px;
     color: white;   
@@ -18,9 +19,10 @@
 }
 
 .display-value{
+    height: 100%;
     background-color: #475d5d5d; 
-    width: 170px;
-    margin-top: 2em;
+    width: 120px;
+    margin-top: 1em;
     text-align: center;
     padding: 1.5em;
     color: white;
@@ -33,8 +35,9 @@
 }
 
 .sources-value{
+    height:100%;
     background-color:#57a8a85d!important;
-    padding: 1em;
+    padding: 0.5em;
     margin-top: 1em;
     border-radius: 10px;
     border-color: white;

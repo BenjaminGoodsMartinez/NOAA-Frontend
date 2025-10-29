@@ -19,10 +19,10 @@ const Shell = () => {
       <div className="home-page-sub-container ">
         <div className="home-page-top-row">
           <Link to="/" aria-label="Go home">
-            <img src={Logo} width={200} alt="NASA Logo" />
+            <img src={Logo} width={150} alt="NASA Logo" />
           </Link>
         </div>
-
+        <div>
         <Routes>
           <Route index element={<Home />} />
           <Route path="/missioncontrolroom" element={<MissionControlRoom />} />
@@ -33,8 +33,12 @@ const Shell = () => {
           <Route path='/settings' element={<Settings/>}/>
 
         </Routes>
+</div>
 
-        {['/missioncontrolroom', '/briefingroom', , '/cameras','/audio', '/video','/settings'].includes(currentPath) && <Footer />}
+<div>
+   {['/missioncontrolroom', '/briefingroom', , '/cameras','/audio', '/video','/settings'].includes(currentPath) && <Footer />}
+</div>
+       
       </div>
     </div>
   );

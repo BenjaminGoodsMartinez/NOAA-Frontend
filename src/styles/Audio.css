@@ -1,11 +1,29 @@
-.audio-levels{
+.audio{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
     width: 100%;
-    height: 500px;
+    height: auto;
+    margin-top: -3em;
+   
+}
+
+.audio-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;   
+     gap: 5em;
+}
+
+
+.audio-levels{
+    width: auto;
+    height: auto;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    
+    margin-top:3em;
 }
 
 
@@ -16,26 +34,36 @@
     color: white;
     font-size: 28px;
     font-weight: 700;
- 
-
 }
 
 
-.audio-levels div {
+.audio-labels{
+    display: flex;
+    justify-content: space-around;
+    margin-top: -2em;
+}
+
+.audio-labels div {
+    margin-left:1.5em;
+}
+
+.audio-level-state{
+margin-top: 2em;
+}
+.audio-levels input {
     rotate: -90deg;
-    width: 500px;
+    width: 250px;
 }
 
 .icons{
     display: flex;
     justify-content: center;
+    margin-top: -2em;
+    
     
 }
 
 .icons * {
     cursor: pointer;
-    margin-top: 1em;
-    margin-bottom: 1em;
-    margin-left: 0.5em;
-    margin-right: 0.5em;
+
 }
