@@ -6,6 +6,7 @@ import { MissionControlRoom } from '../src/pages/missioncontrolroom/MissionContr
 import { BriefingRoom } from '../src/pages/briefingroom/BriefingRoom';
 import {Audio} from '../src/pages/audio/Audio';
 import {Video} from '../src/pages/video/Video';
+import {Cameras} from '../src/pages/cameras/cameras'
 import {Settings} from '../src/pages/settings/Settings';
 import Logo from '../src/images/NasaLogo.png';
 
@@ -27,12 +28,13 @@ const Shell = () => {
           <Route path="/missioncontrolroom" element={<MissionControlRoom />} />
           <Route path="/briefingroom" element={<BriefingRoom />} />
           <Route path='/audio' element={<Audio/>}/>
+          <Route path='/cameras' element={<Cameras/>}/>
           <Route path='/video' element={<MissionControlRoom/>}/>
           <Route path='/settings' element={<Settings/>}/>
 
         </Routes>
 
-        {['/missioncontrolroom', '/briefingroom', '/audio', '/video','/settings'].includes(currentPath) && <Footer />}
+        {['/missioncontrolroom', '/briefingroom', , '/cameras','/audio', '/video','/settings'].includes(currentPath) && <Footer />}
       </div>
     </div>
   );

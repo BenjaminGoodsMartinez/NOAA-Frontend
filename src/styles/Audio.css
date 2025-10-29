@@ -1,16 +1,41 @@
 .audio-levels{
     width: 100%;
-    height: 700px;
+    height: 500px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-   
+    
+}
+
+
+.audio-labels, .audio-level-state, .audio-mute-state{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    color: white;
+    font-size: 28px;
+    font-weight: 700;
+ 
+
 }
 
 
 .audio-levels div {
     rotate: -90deg;
     width: 500px;
+}
 
+.icons{
+    display: flex;
+    justify-content: center;
+    
+}
+
+.icons * {
+    cursor: pointer;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
 }

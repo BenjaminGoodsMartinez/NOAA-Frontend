@@ -15,7 +15,7 @@ const links = ['/missioncontrolroom','/briefingroom' ]
 
 
     return (
-        <div>
+        <div className='main-page'>
             <div className='home-page'>
             
            

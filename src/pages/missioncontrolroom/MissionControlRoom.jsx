@@ -1,7 +1,7 @@
 
 import { useState } from 'react';
 import { Row } from '../../components/row/row';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import '../../styles/MissionControlRoom.css'
 // import { publishEvent } from '@crestron/ch5-crcomlib';
 
@@ -11,8 +11,11 @@ export const MissionControlRoom = () => {
   const [isDisplayPressed, setDisplayPressed] = useState();
   const [isSourcePressed, setSourcePressed] = useState();
 
+  const nextPage = <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
+  <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"/>
+</svg>
 
-  const sources = ['HDMI 1', 'HDMI 2', 'PC', 'Briefing Room'];
+  const sources = ['HDMI 1', 'Lecturn', 'PC', 'Briefing Room'];
 
 
   const activeStyles = {
@@ -176,10 +179,12 @@ export const MissionControlRoom = () => {
               </div>
             </div>
           ))}
+
+ 
         </div>
 
 
-
+     
 
       </div>
 

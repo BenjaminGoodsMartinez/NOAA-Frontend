@@ -1,0 +1,34 @@
+.camera-container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.camera-displays{
+    width:400px;
+    height: 70px;
+    background-color:#57a8a85d!important;
+}
+
+.camera-directionals{
+    display: flex;
+    justify-content: center;
+}
+
+
+.up,.down{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 4em;
+    margin-top: 4em;
+}
+
+.horizontal{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
