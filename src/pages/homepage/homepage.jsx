@@ -1,4 +1,4 @@
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { Row } from '../../components/row/row';
 import { Faders } from '../../components/faders/fader';
 
@@ -18,14 +18,12 @@ const links = ['/missioncontrolroom','/briefingroom' ]
        
             <div className='home-page'>
             
-           
-            <Row 
-                numberOfButtons={2}
-                nameofButtons={mainButtons}
-                buttonColor='#ec1b23'
-                links={links}
-                buttonFunctions={()=>{}}
-            />
+            <div className='row-c'>
+            <Link to={links[0]}><div>Mission Control Room</div></Link>
+             <Link to={links[1]}><div>Briefing Room</div></Link>
+
+            </div>
+
         </div>
      
 

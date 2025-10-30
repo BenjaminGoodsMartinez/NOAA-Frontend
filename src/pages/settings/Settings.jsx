@@ -9,7 +9,12 @@ export const Settings = () => {
 
     return (
         <div>
-            Settings
+            <div className="Settings-Container">
+                <div className="Mission-Timer"></div>
+                <div className="Comms-Link-Monitor"></div>
+
+
+            </div>
         </div>
     )
 

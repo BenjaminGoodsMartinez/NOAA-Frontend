@@ -1,4 +1,5 @@
 import { Routes, Route, Link, BrowserRouter, useLocation } from 'react-router-dom';
+import { useState,createContext, useContext} from 'react'
 import { Home } from '../src/pages/homepage/homepage';
 import { Footer } from '../src/components/footer/Footer';
 import '../src/styles/Homepage.css';
@@ -10,21 +11,30 @@ import {Cameras} from '../src/pages/cameras/cameras'
 import {Settings} from '../src/pages/settings/Settings';
 import Logo from '../src/images/NasaLogo.png';
 
+
+export const LabelContext = createContext(null);
 const Shell = () => {
   const location = useLocation();
   const currentPath = location.pathname;
+  
+    const { label } = useContext(LabelContext);
 
   return (
     <div className="home-page-container app-container">
+     
       <div className="home-page-sub-container ">
         <div className="home-page-top-row">
           <Link to="/" aria-label="Go home">
-            <img src={Logo} width={150} alt="NASA Logo" />
+            <img className='logo'src={Logo} width={currentPath === '/' ? 250 : 170} alt="NASA Logo" />
           </Link>
+
+        <div className='page-label'>{label}</div>
+
+        <div className='core-indicator'></div>
         </div>
         <div>
         <Routes>
-          <Route index element={<Home />} />
+          <Route  index element={<Home />} />
           <Route path="/missioncontrolroom" element={<MissionControlRoom />} />
           <Route path="/briefingroom" element={<BriefingRoom />} />
           <Route path='/audio' element={<Audio/>}/>
@@ -44,10 +54,15 @@ const Shell = () => {
   );
 };
 
-const App = () => (
+const App = () => {
+  const [label, setLabel] = useState('AV Control System');
+  return (
+<LabelContext.Provider  value={{ label, setLabel }}>
   <BrowserRouter>
     <Shell />
   </BrowserRouter>
-);
+  </LabelContext.Provider>    
+  )
+}
 
 export default App;
