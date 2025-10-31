@@ -1,0 +1,42 @@
+.Comm-Link-Container{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.24);
+    padding: 2em;
+    border-radius: 10px;
+}
+
+
+.Title{
+    padding-bottom: 1em;
+}
+.Comm-Link-Status{
+    display:flex;
+    flex-direction: row;
+}
+
+.Lag-Status{
+        text-wrap: nowrap;
+}
+
+
+.status{
+    font-size: 22px;
+    font-weight: 100;
+}
+
+.data{
+    margin-left: 1em;
+    
+}
+
+.chart{
+    background-color: rgba(0, 0, 0, 0.233);
+    width:200px;
+    padding: 1em;
+    border-radius: 10px;
+    align-self: center;
+    margin-left: 1em;
+}
