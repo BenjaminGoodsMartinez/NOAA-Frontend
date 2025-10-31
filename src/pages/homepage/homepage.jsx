@@ -19,8 +19,8 @@ const links = ['/missioncontrolroom','/briefingroom' ]
             <div className='home-page'>
             
             <div className='row-c'>
-            <Link to={links[0]}><div>Mission Control Room</div></Link>
-             <Link to={links[1]}><div>Briefing Room</div></Link>
+            <div ><Link className='text' to={links[0]}>Mission Control Room</Link></div>
+             <div><Link  className='text' to={links[1]}>Briefing Room</Link></div>
 
             </div>
 

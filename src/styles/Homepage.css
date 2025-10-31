@@ -4,6 +4,7 @@
     background-color: #0066b2 !important;
     padding: 25px;
 
+
 }
 .home-page-sub-container{
     display: flex;
@@ -14,11 +15,13 @@
      height:100%;
      border-radius: 30px;
      
+     
 }
 
 .home-page{
     display: flex;
     justify-content: center;
+    
     
 }
 
@@ -31,24 +34,35 @@
     flex-direction: row;
     align-content: center;
     margin-top:-12em;
+    font-size: 26px;
+    font-weight: 100;
+    padding: 2em;
+        text-decoration: none;
 }
 
 .row-c div{
-    width:250px;
-    height: 100px;
+    width:350px;
+    height: 200px;
     border-radius: 20px;
     text-align: center;
     align-content: center;
     background-color: brown;
-    color:white;
     margin: 0.5em;
     cursor: pointer;
+    
+    
+}
+
+.text{
+    text-decoration: none;
+    color:white;
 }
 
 .home-page-top-row{
     display: flex;
     flex-direction: row;
     align-items: center;
+    
    
 }
 
@@ -57,4 +71,6 @@
     font-size: 50px;
     font-weight: 700;
     text-align: center;
+    
 }
+

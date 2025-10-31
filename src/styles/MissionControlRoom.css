@@ -4,6 +4,7 @@
     justify-content: space-around;
     
     
+    
 }
 
 .input-value{
@@ -32,6 +33,7 @@
     border-width: 0.3px;
     border-style: solid;
         text-wrap: nowrap;
+        
 }
 
 .sources-value{
