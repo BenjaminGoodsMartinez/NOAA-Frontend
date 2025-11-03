@@ -3,8 +3,12 @@ import { useState } from 'react';
 import { Row } from '../../components/row/row';
 import { useNavigate, Link } from 'react-router-dom';
 import '../../styles/MissionControlRoom.css'
-// import { publishEvent } from '@crestron/ch5-crcomlib';
-
+import { CrComLib } from '@crestron/ch5-crcomlib';
+import { 
+  bridgeReceiveBooleanFromNative, 
+  bridgeReceiveObjectFromNative, 
+  bridgeReceiveStringFromNative, 
+  bridgeReceiveIntegerFromNative } from '@crestron/ch5-crcomlib';
 
 export const MissionControlRoom = () => {
   const numberofInputs = 4;
@@ -70,18 +74,26 @@ export const MissionControlRoom = () => {
         case 0:
           newInputs.inputState1 = source;
           displayObjects[index] = "On";
+          CrComLib.publishEvent("s", "10", "8C 00 00 02 01 8F" )
+          CrComLib.publishEvent("s", "10", "8C 00 00 02 00 8E" )
           break;
         case 1:
           newInputs.inputState2 = source;
           displayObjects[index] = "On";
+          CrComLib.publishEvent("s", "10", "8C 00 00 02 01 8F" )
+          CrComLib.publishEvent("s", "10",  "8C 00 00 02 00 8E")
           break;
         case 2:
           newInputs.inputState3 = source;
           displayObjects[index] = "On";
+          CrComLib.publishEvent("s", "10", "8C 00 00 02 01 8F" )
+          CrComLib.publishEvent("s", "10",  "8C 00 00 02 00 8E")
           break;
         case 3:
           newInputs.inputState4 = source;
           displayObjects[index] = "On";
+          CrComLib.publishEvent("s", "10", "8C 00 00 02 01 8F" )
+          CrComLib.publishEvent("s", "10",  "8C 00 00 02 00 8E")
           break;
         default:
           break;

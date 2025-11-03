@@ -3,8 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@crestron/ch5-crcomlib": "^2.5.0",
+    "@crestron/ch5-crcomlib": "^2.16.1",
     "@crestron/ch5-utilities-cli": "^2.0.0",
+    "@norgate-av/react-hooks": "^0.2.0",
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.1.0",
