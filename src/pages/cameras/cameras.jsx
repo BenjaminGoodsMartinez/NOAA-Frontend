@@ -10,13 +10,15 @@ const [cameraDirections,setCameraDirections] = useState({
   camera3direction: ''
 });
 
+const [activePreset, setActivePreset] = useState('');
+
 const [presets,setPresets] = useState({
-    preset1: 'Preset 1',
-    preset1_2: 'Preset 2',
-    preset2: 'Preset 1',
-    preset2_1: 'Preset 2',
-    preset3: 'Preset 1',
-    preset3_1: 'Preset 2'
+    preset1: 'Preset 1.1',
+    preset1_2: 'Preset 1.2',
+    preset2: 'Preset 2.1',
+    preset2_1: 'Preset 2.2',
+    preset3: 'Preset 3.1',
+    preset3_1: 'Preset 3.2'
 });
 
 const preset = [
@@ -89,12 +91,14 @@ const handleDirectionPress = (state, index) => {
 
 const handlePresetPress = (state, index) => {
   console.log( state, ' set successfully');
+  setActivePreset(state);
+
   setPresets((prevPreset)=>{
     const input = {...prevPreset};
 
     switch(index){
       case 0:
-        input.preset1 = state
+input.preset1 = state
       break
             case 1:
 input.preset1_2 = state
@@ -153,7 +157,7 @@ return (
     <div className="presets-container">
           {preset.map((preset, index)=>(
             <div className="preset-button" key={index}>
-                <div key={index} onClick={()=>handlePresetPress(preset, index)}>{preset}</div>   
+                <div key={index} style={activePreset === preset ? {backgroundColor: 'rgba(0, 0, 0, 0.33)'} : {}} onClick={()=>handlePresetPress(preset, index)}>{preset}</div>   
             </div>
 
           ))}

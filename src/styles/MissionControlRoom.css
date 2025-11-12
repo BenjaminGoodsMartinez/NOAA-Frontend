@@ -19,6 +19,14 @@
     justify-content: center;
 }
 
+.Display-Type{
+    font-size: 30px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1em;
+}
+
 .display-value{
     height: 100%;
     background-color: #475d5d5d; 

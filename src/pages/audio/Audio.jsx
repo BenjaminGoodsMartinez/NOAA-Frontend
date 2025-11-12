@@ -1,6 +1,7 @@
 
 import { useContext, useState } from "react";
 import '../../styles/Audio.css'
+import { CrComLib, publishEvent } from '@crestron/ch5-crcomlib';
 
 export const Audio = () => {
 
@@ -40,35 +41,60 @@ export const Audio = () => {
                 case 0:
                     if (state === 'mute') {
                         prevMuteState.mute1 = 'unmuted';
+                        CrComLib.publishEvent('b', '9', 1);
                     } else if (state === 'unmuted') {
+                        CrComLib.publishEvent('b', '10', 0);
                         prevMuteState.mute1 = 'mute';
                     }
                     break;
                 case 1:
                     if (state === 'mute') {
                         prevMuteState.mute2 = 'unmuted';
+                        CrComLib.publishEvent('b', '11', 1);
                     } else if (state === 'unmuted') {
+                        CrComLib.publishEvent('b', '12', 0);
                         prevMuteState.mute2 = 'mute';
                     }
                     break;
                 case 2:
                     if (state === 'mute') {
                         prevMuteState.mute3 = 'unmuted';
+                        CrComLib.publishEvent('b', '13', 1);
                     } else if (state === 'unmuted') {
+                        CrComLib.publishEvent('b', '14', 0);
                         prevMuteState.mute3 = 'mute';
                     }
                     break;
                 case 3:
                     if (state === 'mute') {
                         prevMuteState.mute4 = 'unmuted';
+                        CrComLib.publishEvent('b', '15', 1);
                     } else if (state === 'unmuted') {
                         prevMuteState.mute4 = 'mute';
+                        CrComLib.publishEvent('b', '16', 0);
                     }
                     break;
             }
             return prevMuteState;
         });
     };
+
+    const handleLevelChange = (index, level) => {
+        setLevels((prevLevel)=>{
+            const prevLevelState = { ...prevLevel}
+
+            switch (index){
+                case 0:
+                    
+            }
+
+        })
+
+
+    }
+
+
+    //ADD MUTE SPEAKERS
 
     const inputNames = ['Program', 'VTC', 'Lavalier 1', 'Handheld 1'];
     const muteStates = [mute.mute1, mute.mute2, mute.mute3, mute.mute4];

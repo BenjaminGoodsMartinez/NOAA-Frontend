@@ -9,7 +9,9 @@
     flex-direction: column;
     color: white;
     background-color: rgba(0, 0, 0, 0.158);
-    padding: 2em;
+    padding-left: 2em;
+    padding-right: 2em;
+
     border-radius: 10px;
    
 }
@@ -17,7 +19,7 @@
 .header{
     font-size:35px;
     font-weight: 800;
-    padding-bottom: 1em;
+    padding-bottom: 0.5em;
 }
 
 .telemetry-components{
@@ -25,13 +27,13 @@
     font-weight: 600;
         display: flex;
     flex-direction: column;
-    gap: 1em;
+    gap: 0.5em;
 }
 
 .uplink-bandwidth, .signal-delay, .satellite-altitude{
-    padding: 1em;
+    
     background-color: rgba(95, 158, 160, 0.425);
-    width: 500px;
+    width: auto;
     border-radius: 10px;
 }
 

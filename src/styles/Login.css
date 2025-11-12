@@ -1,0 +1,55 @@
+.Login-Container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.Input-Container{
+    margin-bottom: 1em;
+}
+
+.Input-Container * {
+    padding: 1em;
+    border-radius: 5px;
+}
+
+.Keypad-Container{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-content: center;
+    gap: 5px;  
+}
+
+.Keypad{
+    display:flex;    
+    color: white;
+    background-color: rgba(0, 0, 0, 0.24);
+    width: 100px;
+    height: 100px;
+
+    border-radius: 10px;
+    font-size: 25px;
+    font-weight: 200;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.Login-Button, .Backspace-Button, .Clear-Button {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.24);
+    border-radius: 10px;
+    text-align: center;
+    padding: 1em;
+    width: 100px;
+    cursor: pointer;
+}
+
+.Control-Container{
+    display: flex;
+    flex-direction: row;
+    margin-top: 1em;
+    gap: 5px;
+}
