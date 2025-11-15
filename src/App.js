@@ -45,7 +45,6 @@ const Shell = () => {
           <Route path='/cameras' element={<Cameras/>}/>
           <Route path='/video' element={<MissionControlRoom/>}/>
           <Route path='/settings' element={<Settings/>}/>
-
         </Routes>
 </div>
 

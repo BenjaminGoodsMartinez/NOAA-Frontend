@@ -12,6 +12,7 @@ const [cameraDirections,setCameraDirections] = useState({
 
 const [activePreset, setActivePreset] = useState('');
 
+
 const [presets,setPresets] = useState({
     preset1: 'Preset 1.1',
     preset1_2: 'Preset 1.2',
@@ -49,31 +50,34 @@ const presetUnsuccessful = <div class="alert alert-danger" role="alert">
 
 const cameraLabels = ['Camera 1', 'Camera 2' , 'Camera 3']
 
-const left = <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="white" class="bi bi-arrow-left-square-fill" viewBox="0 0 16 16">
-  <path d="M16 14a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2zm-4.5-6.5H5.707l2.147-2.146a.5.5 0 1 0-.708-.708l-3 3a.5.5 0 0 0 0 .708l3 3a.5.5 0 0 0 .708-.708L5.707 8.5H11.5a.5.5 0 0 0 0-1"/>
+const left = <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" class="bi bi-arrow-left-short" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5"/>
 </svg>
 
-const right = <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="white" class="bi bi-arrow-right-square-fill" viewBox="0 0 16 16">
-  <path d="M0 14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2zm4.5-6.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5a.5.5 0 0 1 0-1"/>
+const right = <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"/>
 </svg>
 
-const up = <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="white" class="bi bi-arrow-up-square-fill" viewBox="0 0 16 16">
-  <path d="M2 16a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2zm6.5-4.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 1 0"/>
+const up = <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" class="bi bi-arrow-up-short" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5"/>
 </svg>
 
-const down = <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="white" class="bi bi-arrow-down-square-fill" viewBox="0 0 16 16">
-  <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm6.5 4.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5a.5.5 0 0 1 1 0"/>
+const down = <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" class="bi bi-arrow-down-short" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5A.5.5 0 0 1 8 4"/>
 </svg>
 
 
 
 const handleDirectionPress = (state, index) => {
+
+
+
   setCameraDirections((prevDirection)=>{
     console.log('Direction:', state, ' Index:', index)
     const input = {...prevDirection};
 
     switch(index){
-      case 0: 
+      case 0:
         input.camera1direction = state
       break
       case 1:
@@ -82,7 +86,6 @@ const handleDirectionPress = (state, index) => {
       case 2:
         input.camera3direction = state
     }
-
     return input;
   })
 
@@ -121,51 +124,71 @@ input.preset3_1 = state
   })
 }
 
+const handleDirectionStyle = () => {
+  
 
+
+
+}
+
+
+const setOffSet =(index, side) =>{
+
+  if(side === "left"){
+      return index === 0 ? index : index === 1 ? index + 1 : index === 2 ? index + 2 : ''
+  } 
+
+    return index === 0 ? index + 1: index === 1 ? index + 2 : index === 2 ? index + 3 : ''
+
+}
 
 
 return (
     <div className="camera-container">
-    <div className="camera-labels">
-        {cameraLabels.map((label, index)=>(
-          <div key={index}>
-               <label>{label}</label>
-            </div>
-       
-        ))}
-    </div>
+   
     <div className="camera-displays">
+
+
+
         <div className="camera-directionals">
-                {cameraDirectionState.map((direction, index)=>(
- <table key={index} className="camera-tables">
-                    <tr>
-                        <th className="up"> <div onClick={()=>handleDirectionPress('up', index)}>{up}</div></th>
-                    </tr>
-                    <tr className="horizontal">
-                        <td className="left"> <div onClick={()=>handleDirectionPress('left', index)}>{left}</div></td>
-                        <td className="right"> <div onClick={()=>handleDirectionPress('right', index)}>{right}</div></td>
-                    </tr>
-                    <tr>
-                        <td className="down">   <div onClick={()=>handleDirectionPress('down', index)}>{down}</div></td>
-                    </tr>
-                </table>
+                {cameraDirectionState.map((direction, index)=>(<div>
+                  <div className="camera-labels">
+                    <div key={index}>
+                      <label>{cameraLabels[index]}</label>
+                    </div>
+                  </div>       
+
+        <div className="Direction-Grid" key={index}>
+            <div></div>
+             <div onClick={()=>handleDirectionPress('up', index)} style={direction === 'up' ? {backgroundColor: 'rgba(0, 0, 0, 0.33)'} : {backgroundColor:'white'}} className="up">{up}</div>
+            <div></div>
+            <div onClick={()=>handleDirectionPress('left', index)}style={direction === 'left' ? {backgroundColor: 'rgba(0, 0, 0, 0.33)'} :{backgroundColor:'white'}}  className="left"> {left}</div>
+            <div></div>
+           <div onClick={()=>handleDirectionPress('right', index)}style={direction === 'right' ? {backgroundColor: 'rgba(0, 0, 0, 0.33)'} :{backgroundColor:'white'}}  className="right">{right}</div>
+            <div></div>
+             <div onClick={()=>handleDirectionPress('down', index)}style={direction === 'down' ? {backgroundColor: 'rgba(0, 0, 0, 0.33)'} :{backgroundColor:'white'}}  className="down">{down}</div>
+            <div></div>
+        </div>
+              
+              <div className="presets-container" key={index}> 
+    <div className="presets-container">
+                  <div className="preset-button"  style={activePreset === preset[setOffSet(index, "left")] ? {backgroundColor: 'rgba(0, 0, 0, 0.33)'} : {}} onClick={()=>handlePresetPress(preset[setOffSet(index, "left")], setOffSet(index, "left"))}> {preset[setOffSet(index, "left")]} </div>
+                  <div className="preset-button"  style={activePreset === preset[setOffSet(index, "right")] ? {backgroundColor: 'rgba(0, 0, 0, 0.33)'} : {}} onClick={()=>handlePresetPress(preset[setOffSet(index, "right")], setOffSet(index, "right"))}>{preset[setOffSet(index, "right")]} </div>  
+                  </div>
+              </div>
+
+
+                  </div>
+   
+
                 ))}
                
         </div>
     </div>
 
-    <div className="presets-container">
-          {preset.map((preset, index)=>(
-            <div className="preset-button" key={index}>
-                <div key={index} style={activePreset === preset ? {backgroundColor: 'rgba(0, 0, 0, 0.33)'} : {}} onClick={()=>handlePresetPress(preset, index)}>{preset}</div>   
-            </div>
 
-          ))}
-    </div>
+ 
 
-    <div>{preset.map(()=>(
-            <div> </div>
-    ))}</div>
 
 
     </div>

@@ -3,6 +3,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: -3em;
+    gap: 4px;
     
 }
 
@@ -50,6 +52,10 @@
 .Control-Container{
     display: flex;
     flex-direction: row;
-    margin-top: 1em;
     gap: 5px;
+}
+
+.Status{
+    position: absolute;
+    text-align: center;
 }

@@ -1,83 +1,67 @@
 .camera-container{
- height: 100%;
-    margin-top: -5em;
+
+width: 100%;
+display: flex;
+flex-direction: column;
+align-content: center;
+align-items: center;
 }
 
 .camera-labels{
  display: flex;
  flex-direction: row;
- justify-content: space-evenly;
- 
+ justify-content: center;
+ width: 100%;
+}
+
+.camera-labels * {
+   display: flex;
+   justify-content: space-around;
+   width: 100%;     
 }
 
 .camera-labels label{
     color: white; 
     font-size: 25px;
     font-weight: bolder;
-    margin-bottom: 1em;
+    padding-bottom: 1em;
 }
 
 .camera-directionals{
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    margin-right: 2em;
-    height: auto;
+    width: auto;
+    gap: 8em;
+
 
 }
 
-.camera-tables{
+.camera-displays{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+
+.camera-displays * {
+ width: 100%; 
+}
+
+.Direction-Grid{
     background-color: #9b9b9b2b;
     border-radius: 10px;
-    margin-left: 2em;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Creates 3 columns, each taking 1 fractional unit of space */
+    grid-template-rows: repeat(3, 1fr); /* Creates 3 rows, each taking 1 fractional unit of space */
+    gap: 6rem; /* Adds space between grid items */
+    padding: 1em;
 }
-
-.up,.down{
-    display: flex;
-    justify-content: center;
-
-
-   
-  
-}
-
-.up{
-     padding-top: 1em;
-     padding-bottom: 3.5em;
-}
-
-.down {
-    padding-bottom: 1em;
-    padding-top: 3.5em;
-}
-
-
-
-
-
-.left{
-    padding-left: 1em;
-    padding-right: 8em;
-  
-}
-
-.right{
-    padding-right: 1em;
-    padding-left:8em;
-}
-
 
 .up, .down, .right, .left{
     cursor: pointer;
+    border-radius: 20px 20px;
 }
-
-.horizontal{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
- 
-}
-
 
 .presets-container {
     display: flex;
@@ -86,12 +70,14 @@
     margin-top: 2em;
     padding-left: 3em;
     padding-right: 3em;
+        gap: 1em;
 }
 
-.preset-button *{
+.preset-button {
     padding: 1.5em;
     background-color: #9a9a9a51;
     color: white;   
     border-radius: 10px;
     cursor: pointer;
+
 }

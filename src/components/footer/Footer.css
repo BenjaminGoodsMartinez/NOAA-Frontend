@@ -39,6 +39,7 @@
 
 }
 
-Link * {
-      text-decoration: none;  
+
+.footer-container * {
+    text-decoration: none;
 }

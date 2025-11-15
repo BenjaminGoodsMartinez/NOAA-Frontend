@@ -53,7 +53,6 @@ export const MissionControlRoom = () => {
           newInputs.displayState3 = state;
           CrComLib.publishEvent("b", "5", true)
           CrComLib.publishEvent("b", "6", false)
-
           break;
 
         default:
@@ -62,9 +61,7 @@ export const MissionControlRoom = () => {
 
       return newInputs;
     });
-
     console.log('display', index, 'state', state);
-
   }
 
 

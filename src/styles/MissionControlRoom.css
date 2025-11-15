@@ -1,10 +1,13 @@
+.mission-control-room-sub-container{
+    display:flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
 .inputs-feedback-container, .displays-state-container, .sources-container{
     display: flex;
     flex-direction: row !important;
     justify-content: space-around;
-    
-    
-    
 }
 
 .input-value{
@@ -24,16 +27,15 @@
     color: white;
     font-weight: bold;
     text-align: center;
-    margin-bottom: 1em;
+    margin-bottom: 0.5em;
 }
 
 .display-value{
     height: 100%;
     background-color: #475d5d5d; 
     width: 120px;
-    margin-top: 1em;
     text-align: center;
-    padding: 1.5em;
+    padding: 1em;
     color: white;
     border-radius: 10px;
     cursor: pointer;
@@ -48,7 +50,6 @@
     height:100%;
     background-color:#57a8a85d!important;
     padding: 0.5em;
-    margin-top: 1em;
     border-radius: 10px;
     border-color: white;
     border-style: solid;

@@ -17,7 +17,7 @@ export const Login = () => {
       setTimeout(() => navigate("/home"), 800);
     } else {
       SetStatus(Error);
-      setTimeout(() => SetStatus(null), 3000);
+      setTimeout(() => SetStatus(null), 2000);
     }
   };
 
@@ -25,7 +25,7 @@ export const Login = () => {
 
     <div className="Login-Container">
         {console.log(inputs)}
-        {status}
+        <div className="Status">{status}</div>
     <div className="Input-Container"><input type="password" value={inputs} placeholder="Enter PIN"/></div>
     <div className="Keypad-Container">
         
@@ -40,7 +40,7 @@ export const Login = () => {
         
     </div>
         <div className="Control-Container">
-            <div className="Backspace-Button" onClick={()=> {setInput((prevInput) => (prevInput.slice(0,-1)))}}>{"X"}</div>
+            <div className="Backspace-Button" onClick={()=> {setInput((prevInput) => (prevInput.slice(0,-1)))}}>Backspace</div>
             <div className="Login-Button" onClick={verifyPin}>Login</div>
             <div className="Clear-Button" onClick={()=>{setInput("")}}>Clear</div>
 
