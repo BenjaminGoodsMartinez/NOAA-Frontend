@@ -1,5 +1,6 @@
 import { useState } from "react";
 import '../../styles/Cameras.css'
+import { CrComLib, publishEvent } from '@crestron/ch5-crcomlib';
 
 export const Cameras = () => {
 
@@ -67,6 +68,42 @@ const down = <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill
 </svg>
 
 
+const commandSet = {
+  camera1 : {
+    "up" :  CrComLib.publishEvent("s", "12", "81 01 06 01 VV WW 03 01 FF"),
+    "down" : CrComLib.publishEvent("s", "13", "81 01 06 01 VV WW 03 02 FF"),
+    "left" : CrComLib.publishEvent("s", "14", "81 01 06 01 VV WW 01 03 FF"),
+    "right":  CrComLib.publishEvent("s", "15", "81 01 06 01 VV WW 01 03 FF")
+  },
+  camera2 : {
+    "up" :  CrComLib.publishEvent("s", "16", "81 01 06 01 VV WW 03 01 FF"),
+    "down" : CrComLib.publishEvent("s", "17", "81 01 06 01 VV WW 03 02 FF"),
+    "left" : CrComLib.publishEvent("s", "18", "81 01 06 01 VV WW 01 03 FF"),
+    "right":  CrComLib.publishEvent("s", "19", "81 01 06 01 VV WW 01 03 FF")
+  },
+
+    camera3 : {
+    "up" :  CrComLib.publishEvent("s", "20", "81 01 06 01 VV WW 03 01 FF"),
+    "down" : CrComLib.publishEvent("s", "21", "81 01 06 01 VV WW 03 02 FF"),
+    "left" : CrComLib.publishEvent("s", "22", "81 01 06 01 VV WW 01 03 FF"),
+    "right":  CrComLib.publishEvent("s", "23", "81 01 06 01 VV WW 01 03 FF")
+  },
+
+
+}
+
+
+
+const sendCommand = (camera, direction) => {
+  if (camera === "camera 1"){
+       return direction === "up" ? commandSet.camera1.up : direction === "down" ? commandSet.camera1.down : direction === "left" ? commandSet.camera1.left : commandSet.camera1.right;
+  } else if (camera === "camera 2"){
+         return  direction === "up" ? commandSet.camera2.up : direction === "down" ? commandSet.camera2.down : direction === "left" ? commandSet.camera2.left : commandSet.camera2.right;
+  } else {
+          return direction === "up" ? commandSet.camera3.up : direction === "down" ? commandSet.camera3.down : direction === "left" ? commandSet.camera3.left : commandSet.camera3.right;
+  }
+}
+
 
 const handleDirectionPress = (state, index) => {
 
@@ -78,12 +115,16 @@ const handleDirectionPress = (state, index) => {
 
     switch(index){
       case 0:
+        sendCommand("camera 1", state);
         input.camera1direction = state
+
       break
       case 1:
+        sendCommand("camera 2", state);
         input.camera2direction = state
       break
       case 2:
+        sendCommand("camera 3", state);
         input.camera3direction = state
     }
     return input;

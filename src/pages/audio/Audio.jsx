@@ -84,8 +84,15 @@ export const Audio = () => {
             const prevLevelState = { ...prevLevel}
 
             switch (index){
-                case 0:
-                    
+                case 2:
+                    prevLevelState = level;
+                    CrComLib.publishEvent('s','40', `< SET METER_RATE ${level}`);
+                break;
+                case 3:
+                    prevLevelState = level;
+                    CrComLib.publishEvent('s','41', `< SET METER_RATE ${level}`);
+                break;
+
             }
 
         })
